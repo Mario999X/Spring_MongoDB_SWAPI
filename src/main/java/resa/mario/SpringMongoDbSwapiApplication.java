@@ -12,17 +12,18 @@ import java.util.Scanner;
 
 @SpringBootApplication
 @EnableCaching
-public class RetroFitSpringSwapiApplication implements CommandLineRunner {
+public class SpringMongoDbSwapiApplication implements CommandLineRunner {
 
     @Autowired
     SWController swController;
 
     public static void main(String[] args) {
-        SpringApplication.run(RetroFitSpringSwapiApplication.class, args);
+        SpringApplication.run(SpringMongoDbSwapiApplication.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
+        System.out.println("\t -- INICIANDO TEST MONGODB CON SWAPI --");
         swController.deleteAll();
 
         while (true) {
