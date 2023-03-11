@@ -42,6 +42,7 @@ public class PersonajeService {
         return repository.findById(id).orElse(null);
     }
 
+    @CachePut("personajes")
     public Personaje savePersonaje(Personaje personaje) {
         return repository.save(personaje);
     }

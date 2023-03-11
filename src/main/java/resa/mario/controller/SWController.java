@@ -1,7 +1,6 @@
 package resa.mario.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import resa.mario.config.APIConfig;
@@ -27,7 +26,7 @@ public class SWController {
         this.personajeMapper = personajeMapper;
     }
 
-    @Cacheable("personajes")
+
     @GetMapping("personaje/{id}")
     public ResponseEntity<Personaje> getPersonaje(@PathVariable String id) throws ExecutionException, InterruptedException, TimeoutException {
         System.out.println("🔎");
