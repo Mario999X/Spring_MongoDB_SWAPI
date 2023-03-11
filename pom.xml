@@ -26,7 +26,7 @@
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux -->
-        <!-- Aunque inicie una API propia, en este caso se usa para poder consumir una api externa -->
+        <!-- Forma de consumir una API EXTERNA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>

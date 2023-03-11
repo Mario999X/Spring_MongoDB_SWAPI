@@ -5,6 +5,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
 import resa.mario.dto.PersonajeDTO;
 import resa.mario.models.Personaje;
 import resa.mario.repository.PersonajeRepository;
@@ -27,13 +28,13 @@ public class PersonajeService {
         this.repository = repository;
     }
 
-    public PersonajeDTO getPersonaje(String id) {
+    public Mono<PersonajeDTO> getPersonaje(String id) {
         return webClient
                 .get()
                 .uri("people/" + id)
                 .retrieve()
-                .bodyToMono(PersonajeDTO.class).block();
-        //.doOnError(throwable -> System.out.println("\t-> Personaje no encontrado con id: " + id));
+                .bodyToMono(PersonajeDTO.class)
+                .onErrorReturn(new PersonajeDTO());
     }
 
     @CachePut("personajes")

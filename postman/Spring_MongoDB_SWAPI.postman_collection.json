@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "fe38fdfe-fd5b-46a7-8112-7225a6e59fa1",
+		"name": "Spring_MongoDB_SWAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25935391"
+	},
+	"item": [
+		{
+			"name": "Obtener un personaje por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6969/api/personaje/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"personaje",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener listado de almacenados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6969/api/personaje/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"personaje",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6969/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
